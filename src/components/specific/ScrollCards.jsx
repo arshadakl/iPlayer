@@ -25,10 +25,10 @@ const carouselItems = [
 
 function ScrollCards({ isPortrait, title }) {
     return (
-        <div className='lg:w-10/12 mx-auto py-5  h-full ' >
-            <div className='flex justify-between my-2'>
-                <h1 className='font-reithb text-2xl  text-white'>{title}</h1>
-                <h1 className='font-reithm  text-sm text-white hover:text-bbcpink cursor-pointer transition-all duration-150'>View all</h1>
+        <div className={`lg:w-10/12 mx-auto md:py-5 ${title=="New & Trending" && "py-5" } h-full `} >
+            <div className='flex justify-between my-2 md:mx-0 mx-3'>
+                <h1 className='font-reithb md:text-2xl text-xl  text-white'>{title}</h1>
+                <h1 className='font-reithm  md:text-sm text-xs text-white hover:text-bbcpink cursor-pointer transition-all duration-150'>View all</h1>
             </div>
             <div className='w-full bg-black'>
                 <Carousel
@@ -37,9 +37,9 @@ function ScrollCards({ isPortrait, title }) {
                     }}
                     className="w-full relative"
                 >
-                    <CarouselContent>
+                    <CarouselContent className="mx-1 font-reithm">
                         {carouselItems.map((item, index) => (
-                            <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
+                            <CarouselItem key={index} className="md:basis-1/3 basis-2/4 lg:basis-1/4">
                                 <div className="p-1">
                                     <Card className="rounded-none border-none bg-transparent">
                                         <div className={`relative aspect-[] ${isPortrait ? "aspect-[9/16]" : "aspect-[16/9]"}`}>
@@ -56,8 +56,8 @@ function ScrollCards({ isPortrait, title }) {
                         ))}
                     </CarouselContent>
                     <div className="absolute right-4 top-[50%] flex space-x-2">
-                        <CarouselPrevious className="relative left-0 right-0 top-0 bottom-0 h-14 w-14 bg-white/50 border-none hover:bg-white/80" />
-                        <CarouselNext className="relative left-0 right-0 top-0 bottom-0 h-14 w-14 bg-white/50 hover:bg-white/80 border-none" />
+                        <CarouselPrevious className="relative left-0 right-0 top-0 bottom-0 md:h-14 md:w-14  bg-white/50 border-none hover:bg-white/80" />
+                        <CarouselNext className="relative left-0 right-0 top-0 bottom-0 md:h-14 md:w-14 bg-white/50 hover:bg-white/80 border-none" />
                     </div>
                 </Carousel>
             </div>
