@@ -27,6 +27,7 @@ module.exports = {
         'reithl': ['reithL', 'sans-serif'],
       },
       colors: {
+        bbcpink:"#ff4c98",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
