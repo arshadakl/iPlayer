@@ -1,6 +1,8 @@
 import React from 'react'
 
 function SubMenu() {
+
+  const items =["Channels","Categories","A-Z","TV Guide","Watchlist"]
   return (
     <div className='border-b-[0.1px] border-zinc-50/30 font-reithl font-light'>
       <div className='flex justify-between text-white px-4 lg:w-10/12 mx-auto my-4 '>
@@ -11,13 +13,13 @@ function SubMenu() {
           </div>
         </div>
         <div className='md:flex  hidden justify-end space-x-10 w-full '>
-          <span>Channels</span>
-          <span>Categories</span>
-          <span>A-Z</span>
-          <span>TV Guide</span>
-          <span>Watchlist</span>
+          {items.map((item,index)=>{
+            return(
+              <span className='hover:text-bbcpink text-white transition-all duration-300 cursor-pointer' key={index}>{item}</span>
+            )
+          })}
         </div>
-        <div className='font-reithm text-bbcpink hover:text-white cursor-pointer'>Menu</div>
+        <div className='font-reithm text-bbcpink hover:text-white cursor-pointer md:hidden'>Menu</div>
       </div>
     </div>
   )

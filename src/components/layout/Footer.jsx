@@ -1,13 +1,13 @@
 import React from 'react';
 
 const navLinks = [
-  'Home', 'News', 'Sport', 'Business', 'Innovation', 'Culture', 
+  'Home', 'News', 'Sport', 'Business', 'Innovation', 'Culture',
   'Travel', 'Earth', 'Video', 'Live'
 ];
 
 const footerLinks = [
-  'Terms of Use', 'About the BBC', 'Privacy Policy', 'Cookies', 
-  'Accessibility Help', 'Parental Guidance', 'Contact the BBC', 
+  'Terms of Use', 'About the BBC', 'Privacy Policy', 'Cookies',
+  'Accessibility Help', 'Parental Guidance', 'Contact the BBC',
   'BBC emails for you', 'Advertise with us'
 ];
 
@@ -28,7 +28,7 @@ const Footer = () => {
             ))}
           </nav>
           <p className="text-xs">
-            Copyright © 2024 BBC. The BBC is not responsible for the content of external sites. 
+            Copyright © 2024 BBC. The BBC is not responsible for the content of external sites.
             <a className="font-reithb hover:underline ml-1">Read about our approach to external linking.</a>
           </p>
         </div>
@@ -38,3 +38,36 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+export function FooterSub() {
+  return (
+    <div className="container border-t-[1px] border-zinc-500/50 my-2">
+      <div className="bg-black font-reithm mb-10 text-white text-xs py-2 px-4 flex md:flex-row flex-col gap-4 justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center">
+            <span>Change location:</span>
+            <select className="bg-black ml-2">
+              <option>London</option>
+              {/* Add more options as needed */}
+            </select>
+          </div>
+          <div className="flex items-center">
+            <span>Change language:</span>
+            <select className="bg-black ml-2">
+              <option className="bg-black">English</option>
+            </select>
+          </div>
+        </div>
+        <div className="flex items-center space-x-4">
+          <a className="hover:underline">Parental Controls</a>
+          <span>|</span>
+          <a className="hover:underline">Help & FAQ</a>
+        </div>
+      </div>
+    </div>
+  )
+}
