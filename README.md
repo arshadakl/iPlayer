@@ -54,3 +54,4 @@ Make sure you have the following installed:
 
    Open your browser and go to `http://localhost:5173` to view the app.
 
+ The project is deployed on Vercel. You can view the live application [iPlayer_Live](<https://iplayer.vercel.app//>).
